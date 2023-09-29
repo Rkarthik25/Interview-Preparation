@@ -1,0 +1,231 @@
+1.Explain the Box Model in CSS.
+
+The CSS box model is a container that contains multiple properties including 
+borders, margins, padding, and the content itself.
+
+  +-------------------------------------------+
+  |                  Margin                   |
+  |  +-------------------------------------+  |
+  |  |               Border                |  |
+  |  |  +-------------------------------+  |  |
+  |  |  |           Padding             |  |  |
+  |  |  |  +-------------------------+  |  |  |
+  |  |  |  |        Content          |  |  |  |
+  |  |  |  |                         |  |  |  |
+  |  |  |  +-------------------------+  |  |  |
+  |  |  |                               |  |  |  
+  |  |  +-------------------------------+  |  |
+  |  |                                     |  |
+  |  +-------------------------------------+  |
+  |                                           |
+  +-------------------------------------------+
+
+   Content: The innermost area of an HTML element's rectangular box, 
+   where the actual content, like text or images, is displayed. It is controlled by the width and height properties.
+
+  Padding: The space between the content and the border of an element.
+  Padding is created using the padding property and is used to control the internal spacing of an element.
+
+  Border: A line or outline that surrounds the padding and content of an element. 
+  Borders are defined with the border property and can have different styles, widths, and colors.
+
+  Margin: The space outside an element's border, which separates it from other elements.
+ Margins are set using the margin property and control the external spacing of an element 
+ within the layout of a webpage.
+
+-----------------------------------------------------------------------------------------------------------
+
+2.What is the difference between relative, absolute, fixed, and static positioning?
+
+  Static Positioning: Elements are placed in the normal flow of the document,
+ and you don't need to specify their position .
+
+  Relative Positioning: Elements are positioned relative to their normal position in the document flow, 
+and you can use properties like top, right, bottom, or left to adjust their position.
+
+  Absolute Positioning: Elements are taken out of the document flow and positioned
+ relative to their closest positioned ancestor or the viewport, and you use top, right, 
+ bottom, or left to specify their exact position.
+
+   Fixed Positioning (or) Sticky positioning : Elements are removed from the document flow and positioned 
+relative to the viewport, making them stay in the same place on the screen even when scrolling.
+
+
+
+-----------------------------------------------------------------------------------------------------------
+
+3.Can you explain the difference between a block-level element and an inline element?
+
+   Block elements always start from a new line. 
+   Block elements cover the entire width of the browser
+
+   Inline elements never start from a new line.
+   Inline elements only covers as much  as width needed. 
+
+-----------------------------------------------------------------------------------------------------------
+
+4.Describe the CSS specificity and how it determines which styles are applied.
+
+   Universal selectors (*)
+    tag selectors (h1, p, div)
+   Class selectors (.classname)
+   Attribute selectors ([type="text"])
+   Pseudo-classes (:hover)
+    Pseudo-element (::before)
+   ID selectors (#idname)
+
+-----------------------------------------------------------------------------------------------------------
+
+5. What are CSS Flexbox and Grid? When would you use one over the other?
+
+ FLEX:
+
+   Flexbox is like a row or column layout manager.
+   Best for small-scale layouts within a container.
+
+   
+  Flexbox is best for simple, one-dimensional layouts, like navigation menus or lists 
+  of items in a row or column
+
+ GRID:
+
+   Grid is more suitable for complex, two-dimensional layouts where 
+   you have a grid structure with rows and columns,
+
+   Grid is like a spreadsheet or table layout manager.
+   Best for larger-scale layouts like entire webpage structures.
+-----------------------------------------------------------------------------------------------------------
+
+6. How can you create a CSS animation or transition?
+
+  CSS Transitions:
+
+  CSS transitions allow you to smoothly change property values over a specified duration. 
+
+   button {
+    background-color: blue;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  button:hover {
+    background-color: red;
+  }
+
+   CSS Animations:
+
+    For more complex and controlled animations, CSS provides the @keyframes rule. 
+   It allows you to create animations by gradually changing from one set of CSS styles to another.
+   n animation that makes an element move from left to right over 3 seconds.
+
+   @keyframes moveRight {
+
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100px);
+    }
+   }
+
+  div {
+    animation: moveRight 3s forwards;
+   }
+
+-----------------------------------------------------------------------------------------------------------
+
+
+7.What is the z-index and how does it work?
+
+Z Index is a CSS property that defines the order of overlapping
+ HTML elements. Elements with a higher index will be placed on top of elements with 
+ a lower index. 
+ Note: Z index only works on positioned elements
+ ( position:absolute , position:relative , or position:fixed )
+
+-----------------------------------------------------------------------------------------------------------
+
+
+8.Explain the difference between em, rem, px, and % units.
+
+  Pixels (px):
+
+   Fixed size, not responsive.
+   Often used for precise control.
+
+   Ems (em):
+
+   Relative to the parent element's font size.
+   Useful for responsive text and element sizing.
+
+  Rems (rem):
+
+   Relative to the root (html) element's font size.
+   Provides consistent sizing across the page.
+
+  Percentage (%):
+
+   Relative to the parent element's size.
+   Great for creating responsive layouts that adapt to container size changes.
+
+   
+-----------------------------------------------------------------------------------------------------------
+
+9.What is the : root pseudo-class and how is it used with CSS variables?
+
+The :root pseudo-class is a selector that targets the highest-level parent element in an HTML document,
+ which is the <html> element. In the context of CSS variables (also known as Custom Properties), 
+ the :root pseudo-class is commonly used to define global variables that can be accessed and utilized
+  throughout the entire document. By setting variables on the :root, 
+they become globally available, ensuring consistent theming and easy adjustments.
+
+
+ :root {
+    --main-bg-color: #3498db;
+    --text-color: #e20909;
+}
+
+.box {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    padding: 20px;
+}  
+
+-----------------------------------------------------------------------------------------------------------
+
+10.What are pseudo-elements? Provide examples
+
+
+Pseudo-elements in CSS are selectors that allow you to style specific parts of an element or
+ insert virtual elements into the DOM without needing additional HTML markup. 
+
+ Examples 
+
+ ::before and ::after for inserting content, 
+ ::first-line for styling the first line of text, 
+ and ::first-letter for styling the first letter of an element. 
+ They provide fine-grained control over styling elements and their content.
+
+-----------------------------------------------------------------------------------------------------------
+
+11. How can you achieve a multi-column layout without using Flexbox or Grid?
+
+1.Floats:Floating elements was a common technique to achieve multi-column
+ layouts before Flexbox and Grid became popular.
+
+2.Inline-block:Elements with display: inline-block can be used to create 
+columns that sit next to each other.
+
+3.Positioning:Using the position property (absolute or relative),
+ you can position elements side by side. This method requires careful
+  management and is less fluid than other methods.
+
+
+
+
+-----------------------------------------------------------------------------------------------------------
+
+12. what is stacking concept ?
+
+Stacking context is a three-dimensional conceptualization of HTML elements along an 
+imaginary z-axis relative to the user,
+ who is assumed to be facing the viewport or the webpage

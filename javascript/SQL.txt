@@ -1,0 +1,30 @@
+CREATE DATABASE db_name ---> creates a database
+
+DROP DATABASE db_name ---> deletes a data because
+
+USE db_name  ->selecting the specific database 
+
+to create a table 
+
+syntax      
+
+CREATE TABLE student(
+ 
+ col_1 datatype constraint,
+ col_2 datatype constraint,
+ col_3 datatype constraint
+
+);
+
+example 
+
+CREATE TABLE student(
+ 
+ ID INT PRIMARY KEY,
+ Name VARCHAR(50) ,
+ AGE INT NOT NULL
+
+);
+
+
+ 

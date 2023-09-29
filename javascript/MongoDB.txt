@@ -1,0 +1,73 @@
+ 1. What is MongoDB?
+
+   MongoDB is a document-oriented database that stores data in JSON-like documents.
+   It is a NoSQL database, which means that it does not have a fixed schema.
+ 
+ -----------------------------------------------------------------------------------------------
+
+ 2. What are the advantages of using MongoDB?
+
+  MongoDB is a scalable, flexible and fast database where we can store different types 
+  of data and where we can perform lots of queries.
+
+   
+ -----------------------------------------------------------------------------------------------
+
+ 3. What are the disadvantages of using MongoDB?
+
+   MongoDB can be more difficult to learn , to use , to backup and restore
+   
+  
+ -----------------------------------------------------------------------------------------------
+
+ 4. What is a document in MongoDB?
+
+    In MongoDB, a document is a basic unit of data storage, similar to a row 
+    in a relational database table.
+
+     Documents are stored in collections,  and each document can have a different structure
+ 
+
+   
+ -----------------------------------------------------------------------------------------------  
+
+ 5. What is a collection in MongoDB?
+
+   A collection in MongoDB is a grouping of MongoDB documents. 
+
+   Each collection can contain documents with different structures,
+   but they are typically used to store  data.  
+
+    
+ -----------------------------------------------------------------------------------------------
+
+ 6. What is sharding in MongoDB?
+
+   Sharding is a technique used to distribute data across multiple servers.
+   This allows you to scale your MongoDB database to handle more traffic.  
+
+ -----------------------------------------------------------------------------------------------
+
+7. what is aggregation in MongoDB?
+
+   Aggregation is a powerful tool that can be used to improve the quality, usability, 
+   and value of data.
+    
+   match , 
+   group,
+   project,
+   lookup,
+   unwind,
+   out,
+   sort,
+   limit ,skip
+
+ 
+ -----------------------------------------------------------------------------------------------
+
+ 8.what is aggregation pipeline?
+
+   The aggregation pipeline in MongoDB is a framework for processing and 
+   transforming data in a step-by-step sequence, allowing you to perform complex 
+   operations on documents within a collection,
+    such as filtering, grouping, sorting, and aggregating, to produce desired results   

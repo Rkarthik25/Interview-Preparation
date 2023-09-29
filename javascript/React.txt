@@ -1,0 +1,328 @@
+1. what is React ?
+
+    React is a  flexible open source front-end JavaScript library developed by Facebook in 2011.
+     
+    It follows the component-based approach for building reusable  UI components, 
+    especially for single page applications
+
+-------------------------------------------------------------------------------------------------------
+
+ 2. Key Features of React ?
+
+   Component-Based
+   Virtual DOM
+   Unidirectional Data Flow
+   JSX
+   Reusability
+   Large Ecosystem
+   Performance Optimization
+   Server-Side Rendering
+     
+-------------------------------------------------------------------------------------------------------
+
+3. Virtual DOM :     
+
+   React uses a virtual DOM (Document Object Model) to optimize updates and rendering.
+   The virtual DOM is  lightweight in-memory representation of the actual DOM.
+   When the state of a component changes, React compares the virtual DOM with the actual DOM and
+   only makes changes to the actual DOM when necessary, which is much more efficient than 
+   re-rendering the entire page.
+
+------------------------------------------------------------------------------------------------------- 
+
+4. Class components and functional components :
+
+ Class components and functional components are two ways to define components in React.
+
+ They have distinct syntaxes and capabilities.
+
+ Class Components: They are defined using ES6 classes.
+
+ Functional Components: Initially, these were stateless components defined using functions.
+
+ Lifecycle Methods:
+
+ Class Components: They provide lifecycle methods like componentDidMount, shouldComponentUpdate,
+  and componentWillUnmount.
+
+ Functional Components: Lifecycle behavior can be done using the useEffect hook.
+
+ Conciseness & Readability:
+
+ Class Components: Tend to be more verbose.
+
+ Functional Components: With hooks, functional components can achieve the same functionalities 
+ as class components but often with more concise and readable syntax.
+
+------------------------------------------------------------------------------------------------------- 
+
+5. What are Hooks?
+
+   Hooks are the functions which "hook into" React state and lifecycle in function components.
+   It does not work inside classes.
+
+------------------------------------------------------------------------------------------------------- 
+
+6. UseState :
+
+   useState is a  React hook that allows functional components to manage and update their own state. 
+   It returns the current state value and a function to update that value. 
+
+------------------------------------------------------------------------------------------------------- 
+
+7. UseEffect :
+
+    useEffect is used  to perform side effects, 
+    such as data fetching, DOM manipulation.
+    It's used to manage the lifecycle of a component.
+
+------------------------------------------------------------------------------------------------------- 
+
+8. UseMemo : 
+
+   Returns a memoized value.
+   Useful for optimizing performance by avoiding expensive calculations on every render.
+
+------------------------------------------------------------------------------------------------------- 
+
+9. useCallBack :
+
+   Returns a memoized version of the callback function, ensuring that it 
+   doesn't get re-created on every render unless dependencies change.
+   Useful for optimizing performance, especially when passing callbacks 
+   to child components with React.memo or shouldComponentUpdate.
+
+------------------------------------------------------------------------------------------------------- 
+
+10. useRef :
+
+    Useful for accessing the DOM directly, or for keeping a mutable
+    reference to a value without triggering a re-render
+   
+    Returns a mutable ref object, where .current property is initialized with the passed argument.
+
+------------------------------------------------------------------------------------------------------- 
+
+11. UseContext :
+
+    Provides a way to pass data through the component tree without
+    passing props down manually at every level.
+     Useful for accessing shared values like themes or user authentication status.
+
+      three main  are create , provide , consume
+
+ -------------------------------------------------------------------------------------------------------
+
+12. useReducer:
+
+   An alternative method  to useState for managing more complex state logic in a component.
+
+   Accepts a reducer function and an initial state,by returning the current state and a dispatch method.
+
+ -------------------------------------------------------------------------------------------------------
+
+12. context API :   
+
+    The Context API in React provides a way to pass data directly from a parent component to a
+    child  component without having to pass it through intermediate components as props.
+
+    three main  are create , provide , context
+
+ -------------------------------------------------------------------------------------------------------
+
+13. how do you handle state in react ?
+
+    Handling state in React can be approached in various ways, 
+    depending on the complexity and requirements of your application.
+
+   1. Local Component State (Using Hooks)
+   2. useEffect Hook for Side Effects
+   3. useReducer for Complex State Logic
+   4. Context for Global State
+   5. Class Components and Lifecycle Methods
+   6. Context for Global State
+   7. Third-party Libraries like Redux,Mobx,flux
+
+   -------------------------------------------------------------------------------------------------------
+   
+14. Difference between Props and State:
+
+   Props (Properties):
+
+     Immutable and passed from parent to child.
+     Used for configuring child components.
+     Set in the parent and cannot be changed by the child.
+    
+    State:
+
+     Mutable and managed within a component.
+     Used for managing internal component data.
+     Can change due to user interactions or events.
+
+-------------------------------------------------------------------------------------------------------
+
+ 15. What is Redux and how does it relate to React?
+ 
+   Redux is a library used with React (and other frameworks) to manage the application's state
+   in a predictable and centralized manner. It introduces a global store for state,
+   and is often used to handle complex application states and data sharing between React components.
+   Action 
+   actionType 
+   reducer 
+   store
+
+-------------------------------------------------------------------------------------------------------
+
+ 16.how React's event handling mechanism differs from plain JavaScript ?
+
+      1.Synthetic Event System
+      2.Event Delegation
+      3.CamelCase Naming
+      4.Binding  
+
+-------------------------------------------------------------------------------------------------------
+
+ 17.Lifting state up ?
+
+     Lifting state up in React is sharing data or state from a 
+     child component to its parent component. 
+     
+     This allows multiple child components to access
+      and update the same data through props provided by the parent.
+            
+
+-------------------------------------------------------------------------------------------------------
+
+18. How to optimize a react application?
+
+     Use functional components.
+     Minimize re-renders with memoization.
+     lazy-loading.
+     Optimize images and bundle size.
+     Reduce unnecessary API calls.
+
+-------------------------------------------------------------------------------------------------------
+
+19.   How would you handle forms ?
+
+ Create Component: Make a new component for your form.
+
+ State Setup: Initialize state using useState for form data.
+
+ Input Changes: Capture changes with onChange event and update state.
+
+ Submit Form: Handle submission using onSubmit event of the <form> element.
+
+ Render Elements: Render form inputs with value and onChange props.
+
+ Validation: Implement validation for input data.
+
+-------------------------------------------------------------------------------------------------------
+
+20. Describe controlled and uncontrolled components.
+
+
+   Controlled Components: 
+   
+       controlled components are form elements
+    like input fields where their value is controlled by React state.
+     You manage and update their value through state.
+
+    Uncontrolled Components: 
+    
+    Uncontrolled components are form elements whose value 
+    is not directly controlled by React state. They rely on the DOM to handle their value. 
+    You typically use refs to access their values when needed, but React doesn't actively
+    manage or track their state.
+
+-------------------------------------------------------------------------------------------------------
+
+  21. Explain the concept of "props drilling" and how you can avoid it.
+
+    Prop drilling occurs when a parent component passes data down to its children
+     and then those children pass the same data down to their own children. 
+     This process can continue indefinitely. 
+
+   to avoid prop drilling
+
+    Context API for global data sharing.
+   State management libraries like Redux.
+   Custom hooks for reusable logic.
+
+-------------------------------------------------------------------------------------------------------
+
+ 22.  How does React's reconciliation process work ?
+
+   React's reconciliation process, also known as the "reconciliation algorithm,"
+    is how React updates the DOM efficiently to reflect changes in your component's state or props
+
+
+-------------------------------------------------------------------------------------------------------
+
+23. What is a "key" prop in React and why is it important?
+
+    In React, the "key" prop is a special attribute used when rendering lists of elements. 
+    It's important because it helps React identify each element uniquely within a list, 
+    ensuring efficient updates and preserving component state. Keys are crucial for optimizing performance
+     and avoiding common issues like incorrect list rendering and unnecessary component re-renders.
+
+-------------------------------------------------------------------------------------------------------
+
+24.Explain the difference between a pure component and a regular component in React
+
+    Regular Component:
+
+    Requires manual implementation of shouldComponentUpdate for custom re-render logic.
+    Re-renders by default whenever new props or state are received.
+
+    Pure Component:
+
+     Re-renders only if there are actual changes in props or state, optimizing performance.
+
+-------------------------------------------------------------------------------------------------------
+
+25.How would you manage global state in a React app without using Redux or any other state management libraries?
+
+     Use the Context API for state sharing.
+     Create custom hooks for reusable state logic.
+     Lift state up to common ancestors and pass as props.
+     Use local storage or session storage for simple data.
+
+
+-------------------------------------------------------------------------------------------------------
+
+26. Describe how server-side rendering (SSR) works in React. Why would you use it?
+
+   Server-Side Rendering (SSR) in React involves rendering your React components on the server 
+   side before sending them to the client's browser
+
+    Search Engine Optimization 
+    Faster Initial Load
+    Improved Performance
+
+
+----------------------------------------------------------------------------------------------------
+
+27. class component life cycle
+     
+     (as we dont have any hooks in it this the method)
+
+   1.   getinitial state
+   2.   componentWillMount
+   3.   shouldComponentUpdate
+   4.   componentWillUnmount
+
+----------------------------------------------------------------------------------------------------
+
+
+28. function component life cycle
+
+    (as we have hooks we use it for cycle)
+
+    so  here we use UseEffect for all the phases
+
+    useEffect(): Hook for handling side effects like data fetching and subscribing to changes.
+     It combines the behavior of componentDidMount, shouldComponentUpdate, and componentWillUnmount
+
+----------------------------------------------------------------------------------------------------     
+    

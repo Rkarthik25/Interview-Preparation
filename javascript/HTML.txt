@@ -1,0 +1,68 @@
+1. What's the difference between semantic and non-semantic elements in HTML?
+
+Semantic HTML Elements:
+
+   Have a meaning or purpose that reflects their content.
+   Contribute to the structure and understanding of the web page.
+ 
+   Examples:
+
+   <header>, <nav>, <article>, <footer>.
+
+
+Non-Semantic HTML Elements:
+
+  Are generic and do not convey specific meaning.
+  Typically used for styling or layout purposes.
+
+  Examples: 
+
+  <div>, <span>, <b>, <i>.
+
+
+-----------------------------------------------------------------------------------------------------------
+
+2.What are HTML5 data attributes and why are they useful?
+
+  HTML5 data attributes are a type of attribute you can add to any HTML element 
+  to store custom data specific to that element. They are easily identifiable because 
+  they always start with the prefix data
+
+  <div data-user-id="123" data-user-role="admin">Content</div>
+
+-----------------------------------------------------------------------------------------------------------
+3. Explain the difference between <span> and <div>
+  
+  <span> is for inline styling,----inline element
+
+  while <div> is for grouping and structuring blocks of content. -----block element
+
+-----------------------------------------------------------------------------------------------------------
+
+4.What's the purpose of using the <meta> tag in an HTML document?
+
+    <meta> tags help browsers, search engines, and other tools understand 
+    and present the HTML document appropriately.
+
+    Meta tags are snippets of text that describe a page's content but don't appear on the page itself.
+   SEO (Search Engine Optimization)
+
+ -----------------------------------------------------------------------------------------------------------
+
+5. difference between HTML and HTML5 ?
+
+  New semantic Tags like :  header , footer , nav , article and section
+
+  Multimedia support like : Audio and video
+
+  Graphics and animations 
+
+  -----------------------------------------------------------------------------------------------------------
+
+
+
+6. What is Doctype in HTML?
+
+   that informs the browser about the version of HTML being used in a web page. 
+  
+

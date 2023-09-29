@@ -1,0 +1,68 @@
+1. what is express.JS
+    
+    Express.js is a web framework for Node.js used for building web applications 
+    and APIs due to its simplicity and robust features.
+
+----------------------------------------------------------------------------------------------
+
+2. MiddleWare in express
+
+    Middleware in Express.js are functions that handle HTTP requests and responses, 
+    enabling features like logging, authentication, and error handling.
+
+ 
+----------------------------------------------------------------------------------------------   
+
+3. app.use()    
+
+   app.use() in Express.js adds middleware functions to the request processing pipeline, 
+   often used for tasks like body parsing or authentication.
+
+
+----------------------------------------------------------------------------------------------   
+
+4. Routes in express  
+
+   Routing in Express.js involves defining routes for specific HTTP methods
+    (e.g., GET, POST) using app.get(), app.post(), etc.
+
+ 
+----------------------------------------------------------------------------------------------   
+
+5. error handling 
+
+    Error handling in Express.js involves creating custom error-handling 
+    middleware using app.use() to catch and respond to errors during request processing.
+
+ 
+----------------------------------------------------------------------------------------------
+
+6. CORS
+
+  You can handle CORS in an Express.js application by using the cors middleware package 
+  or by setting the appropriate HTTP headers manually. 
+  CORS is important because it allows or restricts web applications running at one origin (domain) 
+  to request resources from a different origin, ensuring security and preventing unauthorized access.
+
+-------------------------------------------------------------------------------------------------------
+
+7. Difference Between app.listen() and http.createServer() in Express.js:
+
+   app.listen() 
+   
+   is an Express.js method that starts the Express application
+   and listens for incoming HTTP requests on a specified port.
+
+   http.createServer()
+
+  
+   http.createServer() is a Node.js core module that creates an HTTP server instance, 
+   
+   but it doesn't provide the higher-level routing and middleware features offered
+   by Express.js.
+
+
+
+
+
+    

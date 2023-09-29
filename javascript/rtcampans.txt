@@ -1,0 +1,345 @@
+
+What is Git and Github? Difference between git and github?
+
+Git is a distributed version control system for tracking code changes.
+
+GitHub is a web-based platform that hosts Git repositories, facilitating collaboration and code management.
+
+---------------------------------------------------------------------------------------------------------
+
+What are some alternatives of github?
+
+GitLab and Bitbucket are popular alternatives to GitHub for hosting Git repositories and collaboration.
+
+---------------------------------------------------------------------------------------------------------
+
+What are cookies and sessions? Explain their difference.
+
+Cookies are small pieces of client-side data stored in the browser.
+
+Sessions are server-side data storage mechanisms. 
+
+Cookies are stored on the user's device, while sessions are on the server.
+
+---------------------------------------------------------------------------------------------------------
+
+
+What is ReactJS, andIs it a library or framework?
+
+  React is a  open source front-end JavaScript library 
+developed by Facebook in 2011. It follows the component-based approach for building reusable
+UI components, especially for single page applications
+
+---------------------------------------------------------------------------------------------------------
+
+what happens when you change a state? 
+
+When a state changes in React, the component re-renders to reflect the new state. 
+
+
+---------------------------------------------------------------------------------------------------------
+
+What are components in ReactJS?
+
+Components in React are reusable UI elements.
+
+they are classified into two components they are functional and class components
+
+---------------------------------------------------------------------------------------------------------
+
+ What is virtual DOM in React?
+
+   The virtual DOM is  lightweight in-memory representation of the actual DOM.
+   When the state changes, React compares the virtual DOM with the actual DOM and
+   only makes changes to the actual DOM when necessary, which is much more efficient than 
+   re-rendering the entire page.
+
+
+---------------------------------------------------------------------------------------------------------
+
+What is JSX? How is JSX parsed into JavaScript?
+
+JSX is a JavaScript syntax extension used in React for defining UI components.
+JSX is transpiled into standard JavaScript using tools like Babel before execution.
+
+---------------------------------------------------------------------------------------------------------
+
+What is the use of Webpack?
+
+ Webpack is like a tool that helps web developers organize and package their code and files neatly. 
+ It makes websites load faster and  work smoothly by doing smart things with the code and resources.
+
+---------------------------------------------------------------------------------------------------------
+
+Suppose a website is very fast, and you want to make it slower. What actions could be taken?
+
+To slow down a fast website, you can add resource-intensive elements like large images,
+ complex scripts, or excessive animations.
+
+---------------------------------------------------------------------------------------------------------
+
+What is a CDN, and how does it work? 
+
+A CDN (Content Delivery Network) distributes content globally to reduce latency by 
+caching data on servers located closer to users.
+
+---------------------------------------------------------------------------------------------------------
+
+What is Indexing in Database?
+
+Indexing in a database is the process of optimizing data retrieval by 
+creating data structures that facilitate faster search operations.
+
+---------------------------------------------------------------------------------------------------------
+
+Do Indexing affect only fetching, or does it affect insertion and updating too?
+
+Indexing primarily affects data retrieval speed but can have a
+ minor impact on insertion and updating due to maintenance overhead.
+
+---------------------------------------------------------------------------------------------------------
+
+How do you move a commit from one branch to another branch?
+
+You can move a commit from one branch to another using "git cherry-pick" 
+or creating a patch and applying it to the target branch.
+
+---------------------------------------------------------------------------------------------------------
+
+What does the git stash command do?
+
+"git stash" temporarily saves changes that are not ready for committing, 
+allowing you to switch branches or apply changes later.
+
+---------------------------------------------------------------------------------------------------------
+
+Which website will be faster: one built with JavaScript or one built with React?
+
+Website speed depends on various factors. JavaScript and React are tools used together.
+ React can optimize rendering, but performance depends on implementation.
+
+ ---------------------------------------------------------------------------------------------------------
+
+What actions could be taken to make a website faster?
+
+To make a website faster, optimize images, use browser caching, reduce HTTP requests, 
+and employ a CDN for content delivery.
+
+---------------------------------------------------------------------------------------------------------
+
+Where is session data stored in backend servers?
+
+Session data is typically stored on the server in memory, files, or a database, 
+depending on the server's configuration.
+
+---------------------------------------------------------------------------------------------------------
+
+Where does Git store all the data?
+
+Git stores all data, including repository history and configurations, in a hidden 
+".git" folder in the root of the repository.
+
+---------------------------------------------------------------------------------------------------------
+
+How does a .gitignore file work?
+
+A .gitignore file specifies patterns of files and directories that Git should ignore
+ when tracking changes, preventing them from being added to the repository.
+
+---------------------------------------------------------------------------------------------------------
+
+How to verify an email?
+
+Email verification usually involves sending a confirmation link to the provided email address,
+ and upon clicking the link, the email is considered verified.
+
+ ---------------------------------------------------------------------------------------------------------
+
+Which is the best method to verify email: client-based or server-based?
+
+Server-based email verification is more reliable and secure, as it confirms email ownership on the server.
+
+---------------------------------------------------------------------------------------------------------
+
+Will sessions work if we decline cookies?
+
+Sessions often rely on cookies for tracking, so if cookies are declined, session functionality may be affected.
+
+---------------------------------------------------------------------------------------------------------
+
+Why do sessions get destroyed when reopening a website after closing it?
+
+Sessions have a timeout, and if the timeout is reached or the browser is closed,
+ the session data is destroyed, requiring a new login.
+
+ ---------------------------------------------------------------------------------------------------------
+
+What is GitHub's cherry-pick command?
+
+"git cherry-pick" is a Git command used to select and apply specific commits from one branch to another.
+
+---------------------------------------------------------------------------------------------------------
+
+What is DOM (Document Object Model)?
+
+DOM is a programming interface representing a web page's structure, allowing manipulation 
+and access to its elements via scripts.
+
+---------------------------------------------------------------------------------------------------------
+
+What is encryption and decryption?
+
+Encryption is the process of converting data into a secure format, 
+while decryption reverses this process to retrieve the original data.
+
+---------------------------------------------------------------------------------------------------------
+
+What is hashing?
+
+Hashing is the process of converting data into a fixed-size string (hash) 
+using a hashing algorithm. It's often used for secure data storage or integrity verification.
+
+---------------------------------------------------------------------------------------------------------
+
+What is the purpose of salting?
+
+Salting adds random data to hashed passwords to enhance security by making it 
+more challenging for attackers to use precomputed tables (rainbow tables).
+
+---------------------------------------------------------------------------------------------------------
+
+How does JWT work? How do symmetric and asymmetric algorithms work in JWT?
+
+JWT (JSON Web Token) is a compact, self-contained token used for secure data transmission. 
+Symmetric algorithms use a shared secret key, while asymmetric algorithms use public-private
+ key pairs for signing and verifying tokens.
+
+---------------------------------------------------------------------------------------------------------
+
+Do all hashing algorithms generate hash values of fixed size strings of characters?
+
+No, not all hashing algorithms generate fixed-size hash values; some allow variable-length outputs.
+
+---------------------------------------------------------------------------------------------------------
+
+Can there be two computers with the same public IP? How does a router assign IP addresses?
+
+Yes, multiple computers can share the same public IP through Network Address Translation (NAT).
+ Routers assign local IP addresses to devices using DHCP (Dynamic Host Configuration Protocol).
+
+---------------------------------------------------------------------------------------------------------
+
+What happens when you hit a URL when connected with a router?
+
+When you hit a URL, the router forwards the request to the appropriate device in the 
+local network based on port forwarding rules.
+
+---------------------------------------------------------------------------------------------------------
+
+What if two computers connected to the same router are assigned the same IP address?
+
+Assigning the same IP to multiple devices can cause conflicts; routers usually 
+assign unique IPs within the local network.
+
+---------------------------------------------------------------------------------------------------------
+
+How would you implement automatic video quality control, like YouTube?
+
+Implement adaptive streaming based on available bandwidth, selecting the appropriate
+ video quality for seamless playback.
+
+ ---------------------------------------------------------------------------------------------------------
+
+Suppose your site is experiencing high traffic, causing lag. How would you manage it to reduce server load?
+
+Employ load balancing, caching, content delivery networks (CDN), and optimize database 
+queries to handle high traffic efficiently.
+
+---------------------------------------------------------------------------------------------------------
+
+Which data structure does "Lift" use?
+
+The term "Lift" in React typically refers to lifting state up in the component hierarchy,
+ often involving data structures like arrays or objects.
+
+ ---------------------------------------------------------------------------------------------------------
+
+
+What is event bubbling?
+
+Event bubbling is a process where events propagate from child elements to parent elements in the DOM hierarchy.
+
+---------------------------------------------------------------------------------------------------------
+
+How does React re-render components?
+
+React re-renders components when their state or props change, ensuring a consistent and efficient UI update.
+
+---------------------------------------------------------------------------------------------------------
+
+What is HTTP, and what's the difference between HTTP and HTTPS?
+
+HTTP is a protocol for transmitting data over the web. HTTPS is a secure version 
+of HTTP that encrypts data by protecting it from interception.
+
+---------------------------------------------------------------------------------------------------------
+
+What is jQuery, and which is more efficient: jQuery or JavaScript?
+
+jQuery is a JavaScript library simplifying DOM manipulation. JavaScript is more efficient 
+for modern development, as jQuery may introduce unnecessary overhead.
+
+---------------------------------------------------------------------------------------------------------
+
+How can you intentionally slow down a fast website?
+
+To slow down a fast website, you can add resource-intensive elements like large images,
+ complex scripts, or delays in data loading.
+
+ ---------------------------------------------------------------------------------------------------------
+If a website is slow despite quality hardware, how can you identify and fix the issue?
+
+Slow website performance may be due to code bottlenecks, inefficient database queries, 
+or external services. Use profiling and monitoring tools to identify and optimize these areas.
+
+---------------------------------------------------------------------------------------------------------
+
+What are SQL indexes?
+
+SQL indexes are database structures that optimize data retrieval by creating organized data
+ structures for efficient querying.
+
+ ---------------------------------------------------------------------------------------------------------
+How can you insert a string into a numbers-only input box in HTML?
+
+You can use JavaScript to manipulate the input's value property and ensure it only accepts numeric input.
+
+---------------------------------------------------------------------------------------------------------
+
+What's the difference between webpack plugins and loaders?
+
+Webpack plugins extend the build process, while loaders process specific file types during bundling, 
+like transpiling JavaScript or handling CSS.
+
+---------------------------------------------------------------------------------------------------------
+
+
+What are Processes and Threads?
+
+Processes are independent program instances, while threads are lightweight sub-processes
+ running within a process, sharing the same memory space.
+
+ ---------------------------------------------------------------------------------------------------------
+What is Composer and its files?
+
+Composer is a PHP dependency management tool. It uses a "composer.json" file to specify project 
+dependencies and generates a "composer.lock" file to lock dependencies to specific versions.
+
+---------------------------------------------------------------------------------------------------------
+What are client-side and server-side validation?
+
+Client-side validation occurs in the user's browser, checking input before submission.
+
+ Server-side validation happens on the server, ensuring data integrity and security.
+
+---------------------------------------------------------------------------------------------------------

@@ -1,0 +1,555 @@
+1. What's the difference between == and === in JavaScript
+     
+     == and === are two comparison operators used to compare values.
+     ==  It compares only the variable
+     === It compares both the values and their data types.
+
+----------------------------------------------------------------------------------------------
+
+2.Can you explain closures in JavaScript? Perhaps with an example?
+
+    A closure is the combination of a function bundled together
+    A closure gives you access to an outer function's scope from an inner function.
+    This happens because of lexical scope
+
+    ex: 
+ function outerFunction() {
+  let outerVar = 10;
+
+  function innerFunction() {
+    console.log(outerVar); // innerFunction can still access outerVar
+  }
+
+  return innerFunction;
+}
+
+const myClosure = outerFunction();
+myClosure();   
+
+---or---
+
+A closure is the combination of a function and the lexical environment within which that function
+was declared. i.e, It is an inner function that has access to the outer or enclosing function’s
+variables.
+
+----------------------------------------------------------------------------------------------
+
+3.Promises
+
+A promise is an object that may produce a single value  
+with either a resolved value or a rejected value. 
+It will be in one of the 3 possible states: fulfilled, rejected, or pending.
+
+ex.
+
+const myPromise = new Promise((resolve, reject) => {
+  // Simulating an asynchronous operation (e.g., fetching data)
+
+  setTimeout(() => {
+    const randomValue = Math.random();
+
+    if (randomValue < 0.5) {
+      resolve("Success!"); // Resolve the Promise
+    } else {
+      reject("Error!"); // Reject the Promise
+    }
+  }, 1000); // Resolves or rejects after a 1-second delay
+});
+
+// Using the Promise
+myPromise
+  .then((result) => {
+    console.log("Promise resolved:", result);
+  })
+  .catch((error) => {
+    console.error("Promise rejected:", error);
+  });
+
+
+----------------------------------------------------------------------------------------------
+
+4.Why do you need a promise?
+
+Promises are used to handle asynchronous operations. 
+They provide an alternative approach for callbacks by reducing the 
+callback hell and writing the cleaner code.
+
+----------------------------------------------------------------------------------------------
+
+5.what are CallBacks ?
+
+A callback function is a function passed into another function as an argument. 
+This function is invoked inside the outer function to complete an action.
+
+ex.
+function callbackFunction(name) {
+console.log('Hello ' + name);
+}
+
+function outerFunction(callback) {
+let name = prompt('Please enter your name.');
+callback(name);
+}
+outerFunction(callbackFunction);
+
+----------------------------------------------------------------------------------------------
+
+
+6.What does promise.All() do ?
+
+ Promise.all() is a method in JavaScript used to handle multiple promises simultaneously.
+ It takes an  an array of promises as  input and returns a new promise 
+ only when all the promises are fulfilled it will result give the resolved value 
+ else it will result as rejected.
+
+ex.
+
+const promise1 = fetch('https://api.example.com/data1');
+const promise2 = fetch('https://api.example.com/data2');
+const promise3 = fetch('https://api.example.com/data3');
+
+Promise.all([promise1, promise2, promise3])
+  .then((results) => {
+    // All promises have resolved successfully
+    console.log('Data 1:', results[0]);
+    console.log('Data 2:', results[1]);
+    console.log('Data 3:', results[2]);
+  })
+  .catch((error) => {
+    // At least one promise has rejected
+    console.error('An error occurred:', error);
+  });
+
+  ----------------------------------------------------------------------------------------------
+
+ 7. what is Prototypal inheritance ? 
+
+    Prototypal inheritance is a mechanism where objects can inherit properties and behaviors 
+    from other objects.
+
+ ex.
+
+ // Define a prototype object
+
+const animal = {
+  speak: function() {
+    console.log("The animal makes a sound.");
+  }
+  
+};
+
+const dog = Object.create(animal);
+
+
+dog.breed = "Golden Retriever";
+
+console.log(dog.breed); // Output: Golden Retriever
+dog.speak(); // Output: The animal makes a sound.
+
+
+----------------------------------------------------------------------------------------------
+
+8. what is (this) keyword ?
+
+ It allows you to access and work with the properties and methods of the current object 
+
+ this  depends on how and where a function is called.
+
+
+ex.
+
+ let obj={
+    "A":1,
+    "B":2,
+    "C":3,
+     soln:function(){
+        console.log(this['B'])
+     }
+ }
+
+obj.soln()
+
+this keyword only works on normal Function
+not on ES6 function.
+
+----------------------------------------------------------------------------------------------
+
+9.what is hoisting?
+
+Hoisting is where variable and function declarations are moved to the top of their  scope during
+ the compilation phase. However, 
+it's important to note that only the declarations are hoisted, not initializations. 
+This is why using a variable or function before its declaration can sometimes produce unexpected results.
+
+
+ex.
+
+console.log(hoist)
+
+const hoist ='abha'  or let ----> reference error
+
+var hoist  -> undefined
+
+console.log(hoist)
+
+ with let and const it cannot be hoisted unless the variable is initialized with some value 
+ it will give reference error
+
+ let and const variables are hoisted but can't be accessed until the line of code 
+ where they're actually declared (because of the Temporal Dead Zone).
+
+ with var it can be hoisted even without initialization but will result undefined
+
+----------------------------------------------------------------------------------------------
+
+10. difference between var , let and const
+
+ var, let, and const  all are used to declare variables ,but they have some key differences
+ in terms of scope, hoisting, and mutability
+
+var: Function-scoped, hoisted, can be re-assigned and re-declared.
+
+let: Block-scoped, hoisted with TDZ, can be re-assigned but not re-declared.
+
+const: Block-scoped, hoisted with TDZ, cannot be re-assigned or re-declared.
+
+
+
+   let ans='janani'
+   let ans='abha'     
+
+   var an='janani'
+   var an='abha'
+
+   const a='janani'
+         a='abha'
+   console.log(a)
+
+
+----------------------------------------------------------------------------------------------
+
+11. Describe the Event Loop and how it works in JavaScript.
+
+   A mechanism  that continuously checks the call stack and, when empty, 
+   it pushes the task from the callback queue,
+    enabling non-blocking, asynchronous execution in a single-threaded environment.
+
+----------------------------------------------------------------------------------------------
+
+12. How would you handle errors in JavaScript?
+
+    we can handle errors in several methods
+
+   => try catch finally
+   => error event listener
+   => promises .catch()
+   => async await with try() catch()
+   => custom error  throw()
+
+   ----------------------------------------------------------------------------------------------
+
+
+13.  What are Arrow Functions? How are they different from traditional functions?
+
+  An arrow function is a shorter syntax  and does not have its own this,
+  arguments, super, or new.target. 
+
+  arrow functions are best suited for non-method functions, and
+  they cannot be used as constructors.
+
+  anonymous functions can be used in traditional function 
+  whereas in ES6 it can't be done.
+
+----------------------------------------------------------------------------------------------
+
+14. How does async and await work? Provide a simple example.
+
+async:
+
+ It's used to declare an asynchronous function.
+ An async function always returns a promise, whether you explicitly return one or not.
+
+await:
+
+ It's used inside an async function to pause the execution until the promise is resolved or rejected.
+ The function then returns the resolved or rejected value.
+
+ex.
+
+async function fetchData() {
+  return "Data fetched successfully!";
+}
+
+async function getData() {
+  const result = await fetchData();
+  console.log(result);
+}
+
+getData(); // Output: "Data fetched successfully!"
+
+----------------------------------------------------------------------------------------------
+
+15. spread operator:
+
+The spread operator in JavaScript (...) is a  syntax used to expand and separate elements 
+in an array or object into individual elements.
+
+ex.
+
+function calculateSum(x, y, z) {
+return x + y + z;
+}
+const numbers = [1, 2, 3];
+console.log(calculateSum(...numbers)); // 6
+
+
+----------------------------------------------------------------------------------------------
+
+16.What is destructuring in ES6 and why is it useful?
+
+ Destructuring in ES6 is a feature that allows you to extract values from objects or arrays and assign 
+ them to variables in a more concise and convenient way.
+
+ ----------------------------------------------------------------------------------------------
+
+17.Explain how map, reduce, and filter methods work.
+
+map Method:
+---------------
+
+map is a method used on arrays to create a new array by applying
+ a provided function to each element in the original array.
+It doesn't modify the original array; 
+instead, it returns a new array with the modified elements.
+
+reduce Method:
+---------------
+
+reduce is a method used on arrays to accumulate or reduce an array of values into a single value 
+It takes a callback function and an initial value and iterates through 
+the array, updating the accumulated value based on the callback.
+
+filter Method:
+---------------
+
+filter is a method used on arrays to create a new array by filtering out elements 
+It returns a new array containing only the elements for which the provided function returns true.
+
+It doesn't modify the original array; 
+instead, it returns a new array with the modified elements.
+
+ ----------------------------------------------------------------------------------------------
+
+ 18.What is the difference between a method and a function in JavaScript?
+
+Function:
+
+A  block of reusable code.
+it is not tied to any specific object.
+Invoked by name and can accept parameters and return a value.
+
+Method:
+
+A method is a  function associated with an object or class.
+Invoked using dot notation on the object or class it's associated with.
+
+ ----------------------------------------------------------------------------------------------
+
+ 19.How would you detect if an object is an array or not?
+
+ Array.isArray() Method:
+
+ex.
+
+ const myArray = [1, 2, 3];
+ if (Array.isArray(myArray)) {
+  console.log("It's an array!");
+ } else {
+  console.log("It's not an array.");
+ }
+
+
+Instanceof Operator:
+ex.
+
+const myArray = [1, 2, 3];
+if (myArray instanceof Array) {
+  console.log("It's an array!");
+} else {
+  console.log("It's not an array.");
+}
+
+
+
+Constructor Property:
+
+ex.
+
+const myArray = [1, 2, 3];
+if (myArray.constructor === Array) {
+  console.log("It's an array!");
+} else {
+  console.log("It's not an array.");
+}
+
+
+----------------------------------------------------------------------------------------------
+
+20. event delegation :-
+
+    event delegation is basically where we give the event listener to the parent 
+    instead of giving the event listener to the every child separately.
+
+----------------------------------------------------------------------------------------------
+
+21.What is JSON?
+
+ JSON (JavaScript Object Notation) is a lightweight format that is used for data interchanging.
+
+ When exchanging data between a browser and a server, the data can only be text. 
+
+ Since JSON is text only, it can easily be sent to a server and can get from a server, 
+and used as a data format by any programming language.
+
+----------------------------------------------------------------------------------------------
+
+
+21. null and undefined
+
+undefined: A variable that has been declared but has not been assigned a value 
+
+null: A value that represents no value or no object. It's an intentional absence of any value.
+
+let x  ----> undefined
+let x = null 
+
+null == undefined;  // true
+null === undefined; // false
+
+----------------------------------------------------------------------------------------------
+
+22. How would you handle exceptions in asynchronous code?
+
+ callbacks, promises, async/await, event emitters  these are  ways to handle exceptions.
+
+ this failures  are caught and handled properly.
+
+
+----------------------------------------------------------------------------------------------
+
+23. shallow Copy and Deep Copy : 
+
+Shallow Copy:
+
+ A shallow copy of an object or array creates a new copy, 
+but it still shares references to nested objects or arrays with the original.
+ Changes to nested objects affect both the original and the copy.
+
+Deep Copy: 
+
+A deep copy of an object or array creates a completely independent 
+copy, including all nested objects or arrays. Changes to the copy
+ do not affect the original, and vice versa
+----------------------------------------------------------------------------------------------
+
+24. Shadow DOM :
+
+  Shadow is creating a custom element ,we can style and behaviors on our own,
+  it is also like all the other tags it encapsulate and hiding from main document tree.
+
+----------------------------------------------------------------------------------------------
+
+25. Call, Apply, and Bind:
+
+ These are special functions that let us control how a function is executed.
+
+
+ call:
+
+   The call method is used to invoke a function with a specific this value 
+   and arguments passed individually.
+
+   apply:
+
+   The apply method is similar to call, but it accepts arguments as an array.
+
+   bind:
+  
+    The bind method creates a new function that, when invoked, has a specific this
+    value and arguments to the original function.  
+   
+
+-------------------------------------------------------------------------------------------------
+
+26. memoization:
+
+Memoization is a technique that enhances function performance by 
+caching prior results. When a memoized function is invoked, its parameters 
+index the cache. If the data exists, it's returned directly; otherwise, 
+the function runs and its result gets cached.
+
+example: 
+   
+    function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+
+   console.log(fibonacci(10));  // Output: 55
+
+-------------------------------------------------------------------------------------------------
+
+27. IIFE
+
+    IIFE stands for "Immediately Invoked Function Expression."
+    It is a JavaScript function that is defined and executed immediately after its creation.
+    IIFE is commonly used to create a private scope for variables and to encapsulate code
+    to avoid polluting the global scope. 
+
+    example
+
+     (function() {
+  // Your code here
+     })();
+
+-------------------------------------------------------------------------------------------------
+
+ JSON   -javascript object notation
+
+ API  -Application programming interface
+
+ NPX -- node package execute
+
+ NPM -- node package manager
+
+ DOM  -- document object model
+
+ NVM  --node version manager
+
+ REST API -  Representational State Transfer API
+
+ JSX- Javascript Xml language
+
+ XML --extensible Markup language
+
+ IIFE -Immediately invoked function expression
+
+ ES6 -ecma script 6
+
+ SSR -server side rendering
+ 
+ HOC -higher order component
+
+ AJAX- Asynchronous JavaScript and XML.
+
+ OOP - Object oriented progaraming
+
+ NAN -Not a number
+
+ JWT -json web token
+
+ CORS - Cross-Origin Resource Sharing
+
+

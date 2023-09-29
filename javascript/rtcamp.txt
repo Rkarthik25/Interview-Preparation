@@ -1,0 +1,124 @@
+1: What is Git and Github? 
+
+2: Difference between git and github?
+
+3: What are some alternatives of github? 
+
+4: What are cookies and sessions? Explain their difference.
+
+5: What is ReactJS and what happens when you change a state? Is it a library or framework?
+
+6: What are components in reactjs? Q: What is virtual DOM in react? 
+
+7: What is JSX? How JSX is parsed into Javascript? 
+
+8: What is the use of Webpack?
+
+9: Suppose website is very fast and I'm willing to make it slow what actions could be taken?
+
+10: What is CDN? How CDN works? Q: What is Indexing in Database? 
+
+11:Do Indexing affect only fetching or it will affect insertion and updation also? 
+
+12: How will you move a commit from one branch to another branch? 
+
+13: What does git stash command do?
+
+14: Which website will be more faster the one built with javascript or the one built with react? 
+
+15: What actions could be taken to make a website faster?
+
+16: Where session data is get stored in backend servers? 
+
+17: Git stores all the data in which folder?
+
+18: How gitignore file works (kindly read this in detail) 
+
+19: How to verify a email? 
+
+20:Which is the best method to verify the email client-based or server-based? 
+
+21: Will session work if we decline cookies? 
+
+22: When reopening a website after closing it session made on that website get destroyed automatically and you need to login again. why so? 
+
+23: What is Github's cherry-pick command? 
+
+24: What is DOM? 
+
+25: What is encryption and decryption?
+
+26:What is hashing ? 
+
+27:What is the purpose of salting? 
+
+28: How JWT works? How symmetric and asymmetric algo works?
+
+29:What is encryption and decryption? Different algos for encryption and hashing? 
+
+30: Do all hashing algos generates hash value of fixed size string of characters?
+
+31: Can be there two computers with same public IP? Q: How router assignes IP to computers? 
+
+32: What happens when you hit a url when you are connected with a router?
+
+33: What if two computers connected with same router are assigned same IP address?
+
+34: How will you make a youtube like automatic video quality controller? 
+
+35. Suppose your site is experiencing high traffic, causing lag. 
+
+36. How would you manage it to reduce server load?
+
+37. Lift use which data structure
+
+38.What is event bubbling? 
+
+39.How react re renders?
+
+40. Design captcha system 
+ 
+41.Design youtube quality control 
+
+42.What is HTTP, difference between HTTP and HTTPS.
+
+43. What is jQuery and which is more efficient jQuery or JavaScript? 
+
+44. My website is very fast and I want to make it throttle or a bit slow, how can I achieve this behaviour
+
+45. My website is slow even when the hardware (server, etc.) on which it is deployed is of best quality
+, what could be the problem and how could I identify the problem and make the website fast?
+
+46.What is SQL indexes ?
+
+47.How you insert a string into a numbers only input box in HTML?
+
+48.What's the difference between webpack plugins and loaders?
+
+49.What are Process and Thread?
+
+50.What is the Composer and files of it?
+
+51.What are client side and server side validation?
+
+
+
+
+
+
+
+
+
+
+ ***second technical round***
+ In the second technical round the interviewer will ask you only 3 scenario based questions.
+
+Q1 : How will you build a youtube like automatic video quality controller? Don't just read theory. 
+Read how you can check network latency and how you will switch in between different quality 
+of videos on the basis of network latency? Without using any javascript library 
+
+Q2 : How will you implement a OTP verification tool without using backend? 
+
+Q3 : Suppose there is an elevator and a person is standing on 
+the 6th floor another  person is standing on the 10th floor then how it will work and what 
+can be the algo and data structure used in the working of elevator?

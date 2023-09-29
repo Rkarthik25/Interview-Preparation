@@ -1,0 +1,81 @@
+1.What is node js ?
+
+    Node.js is a runtime environment that lets you run JavaScript code on servers, not just in web browsers
+
+    Developers use it to build web servers, APIs, and other networked applications. It's popular because it's 
+    efficient and has a large community of developers and packages available.
+
+--------------------------------------------------------------------------------------------------------------
+
+2.Can you explain the event-driven, non-blocking I/O model of Node.js
+
+  The event-driven, non-blocking I/O model of Node.js allows it to efficiently handle
+  asynchronous tasks like file reading and network requests without waiting, to 
+  its event loop and callback functions. This makes Node.js well-suited for 
+  building high-performance, scalable applications.   
+
+--------------------------------------------------------------------------------------------------------------
+
+
+3. what is NPM?
+
+  The Node Package Manager (NPM) in Node.js development:
+
+     Manages JavaScript packages and libraries.
+    Handles project dependencies, ensuring the right versions.
+    Allows the installation of global packages.
+    
+
+--------------------------------------------------------------------------------------------------------------
+
+
+4. Describe the CommonJS module system in Node.js. How does it work, and why is it useful?
+     
+     import and export in same page
+     creating maintainable and organized codebases.
+
+ --------------------------------------------------------------------------------------------------------------
+    
+
+5. What are callbacks in Node.js, and why are they commonly used?
+
+   Callbacks in Node.js are functions used to manage asynchronous operations.
+    They are commonly used because they allow you to handle async tasks, respond to events, and manage 
+   errors efficiently in Node.js, making it well-suited for non-blocking, event-driven programming.
+
+ --------------------------------------------------------------------------------------------------------------
+  
+
+6. What is the purpose of the package.json file in a Node.js project?
+
+   Manages project dependencies and their versions.
+   Contains project metadata.
+   Facilitates package publishing 
+
+--------------------------------------------------------------------------------------------------------------
+
+
+7. What are the different ways to write middleware in Node.js?
+
+  Middleware is a function that is executed between the request and response objects.
+  It can be used to perform tasks such as authentication, authorization, and logging.
+
+  There are two main ways to write middleware in Node.js:
+   
+   The Express middleware framework: 
+   
+   This is a popular middleware framework that provides a number of 
+   pre-built middleware functions.
+
+   The native Node.js middleware API: 
+   
+   This is a more low-level API that allows you to write custom middleware functions
+
+--------------------------------------------------------------------------------------------------------------
+
+
+8. Explain the concept of microservices in Node.js architecture.
+
+     Microservices is an architectural style where a large application is broken 
+   down into smaller, independently deployable services that communicate with each other through APIs.
+   Node.js is often used to build these services due to its lightweight and efficient nature.   

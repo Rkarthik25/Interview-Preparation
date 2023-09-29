@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Shadow DOM Example</title>
+</head>
+<body>
+    <my-button></my-button>
+    <script>
+        const button = document.querySelector('my-button');
+        const shadow = button.attachShadow({ mode: 'open' });
+
+        const style = document.createElement('style');
+        style.textContent = `
+            button {
+                background-color: lightblue;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+            }
+        `;
+
+        const buttonElement = document.createElement('button');
+        buttonElement.textContent = 'Click Me';
+
+        shadow.appendChild(style);
+        shadow.appendChild(buttonElement);
+    </script>
+</body>
+</html>
