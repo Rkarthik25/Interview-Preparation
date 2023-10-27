@@ -140,7 +140,6 @@
    3. useReducer for Complex State Logic
    4. Context for Global State
    5. Class Components and Lifecycle Methods
-   6. Context for Global State
    7. Third-party Libraries like Redux,Mobx,flux
 
    -------------------------------------------------------------------------------------------------------
